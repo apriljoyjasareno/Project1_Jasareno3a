@@ -1,0 +1,319 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #222;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+/* ---------- Landing page ---------- */
+.landing {
+   min-height: 100vh;
+  background: url("/bg.jpg") center / cover no-repeat;
+}
+
+.landing-overlay {
+ min-height: 100vh;
+  background: rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  padding: 40px;
+  color: white;
+  flex-wrap: wrap;
+}
+
+.landing-left {
+  text-align: center;
+  max-width: 320px;
+}
+
+.landing-left h1 {
+  font-size: 2.4rem;
+  margin-bottom: 16px;
+}
+
+.landing-left p {
+  margin-bottom: 24px;
+}
+
+.landing-right {
+  max-width: 480px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.landing-right p {
+  margin-bottom: 18px;
+  text-align: justify;
+}
+
+.gold-btn {
+  background: #e9b44c;
+  border: none;
+  border-radius: 4px;
+  padding: 12px 28px;
+  font-size: 1rem;
+  color: #222;
+}
+
+.gold-btn:hover {
+  background: #f2c466;
+}
+
+.gold-btn.small {
+  padding: 8px 16px;
+  font-size: 0.9rem;
+}
+
+/* ---------- Selection page ---------- */
+.selection-page {
+  min-height: 100vh;
+  background: #e9ecf3;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: #0f3460;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 24px;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.brand {
+  font-weight: 700;
+  color: #e9b44c;
+  font-size: 1.1rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 32px;
+}
+
+.nav-links button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1rem;
+}
+
+.nav-links button:hover {
+  color: #e9b44c;
+}
+
+.section {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 32px 16px;
+}
+
+.section-header {
+  background: #0f3460;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 24px;
+  font-size: 1.4rem;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 8px;
+  padding: 12px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.card-image {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.card h3 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.card-sub {
+  font-size: 0.9rem;
+  margin-top: 4px;
+}
+
+.card-cost {
+  margin: 8px 0;
+  font-weight: 600;
+}
+
+.qty-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.qty-btn {
+  width: 32px;
+  height: 28px;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+.qty-btn.minus {
+  background: #3cc4c9;
+}
+
+.qty-btn.plus {
+  background: #3d7be0;
+}
+
+.qty-value {
+  min-width: 20px;
+  font-weight: 600;
+}
+
+.total-box {
+  background: white;
+  width: fit-content;
+  margin: 28px auto 0;
+  padding: 12px 40px;
+  border-radius: 8px;
+  font-size: 1.2rem;
+}
+
+/* ---------- Meals ---------- */
+.people-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+  font-weight: 700;
+}
+
+.people-row input {
+  padding: 6px 10px;
+  width: 120px;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.meals-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 200px);
+  gap: 20px 40px;
+  justify-content: center;
+}
+
+.meal-item label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.1rem;
+}
+
+.meal-item input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+}
+
+.meal-item p {
+  margin: 6px 0 0 32px;
+  font-size: 1.05rem;
+}
+
+/* ---------- Details modal ---------- */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  padding: 16px;
+}
+
+.modal {
+  background: white;
+  border-radius: 8px;
+  padding: 28px;
+  width: 100%;
+  max-width: 640px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  text-align: center;
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  background: none;
+  border: none;
+  font-size: 1.3rem;
+}
+
+.modal-label {
+  letter-spacing: 1px;
+  color: #444;
+}
+
+.modal-total {
+  font-size: 2.4rem;
+  margin-bottom: 20px;
+  color: #0f3460;
+}
+
+.empty-msg {
+  color: #666;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: center;
+}
+
+th {
+  background: #f1f3f8;
+}
+
+tbody tr:nth-child(odd) {
+  background: #f7f7f9;
+}
